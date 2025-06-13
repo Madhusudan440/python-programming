@@ -37,9 +37,9 @@ def display_result(user, computer, result):
     if result == 'tie':
         print("Result: It's a tie!")
     elif result == 'win':
-        print("Result: You win! 🎉")
+        print("Result: You win! ")
     else:
-        print("Result: You lose. 😢")
+        print("Result: You lose. ")
 
 def play_again():
     while True:
