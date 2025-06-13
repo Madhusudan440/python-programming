@@ -15,23 +15,27 @@ def calculator():
         print("4. Division (/)")
         choice = input("Enter your choice (1-4): ")
 
+        result = None
+
         if choice == '1':
             result = num1 + num2
-            print(f"Result: {result}")
         elif choice == '2':
             result = num1 - num2
-            print(f"Result: {result}")
         elif choice == '3':
             result = num1 * num2
-            print(f"Result: {result}")
         elif choice == '4':
             if num2 == 0:
                 print("Error: Division by zero is not allowed.")
             else:
                 result = num1 / num2
-                print(f"Result: {result}")
         else:
             print("Invalid operation choice.")
+
+        if result is not None:
+            if result.is_integer():
+                print(f"Result: {int(result)}")
+            else:
+                print(f"Result: {result}")
 
         again = input("Do you want to perform another calculation? (y/n): ")
         if again.lower() != 'y':
